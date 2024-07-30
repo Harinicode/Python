@@ -1,0 +1,10 @@
+import math
+n=int(input("Enter n value:"))
+sum=0
+for i in range(0,n+1):
+    sum+=math.pow(i,3)
+    if i==n:
+        print(i,"^3 ",end=" = ")
+        break
+    print(i,"^3 ",end=" + ")
+print(sum)
