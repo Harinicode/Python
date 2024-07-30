@@ -1,0 +1,10 @@
+import math
+n=int(input("Enter n value:"))
+sum=0
+for i in range(0,n+1):
+    sum+=math.pow(i,i)
+    if i==n:
+        print(i,"^",i,end=" = ")
+        break
+    print(i,"^",i,end=" + ")
+print(sum)
