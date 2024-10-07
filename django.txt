@@ -1,0 +1,31 @@
+>>django-admin startproject newpro
+>>cd newpro
+>>dir
+
+07-10-2024  16:33    <DIR>          .
+07-10-2024  16:33    <DIR>          ..
+07-10-2024  16:33               684 manage.py
+07-10-2024  16:33    <DIR>          newpro
+               1 File(s)            684 bytes
+               3 Dir(s)  22,360,887,296 bytes free
+-------------------------------------------------------------cmd1
+py manage.py runserver
+py manage.py makemigrations
+py manage.py migrate newapp
+py manage.py runserver
+--------------------------------------------------------------cmd2
+py manage.py migrate newapp
+py manage.py runserver
+
+
+py manage.py sqlmigrate newapp
+
+
+py manage.py sqlmigrate newapp 0001
+output
+BEGIN;
+--
+-- Create model newapp
+--
+CREATE TABLE "newapp_newapp" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(150) NOT NULL, "body" text NOT NULL, "timestamp" datetime NOT NULL);
+COMMIT;
